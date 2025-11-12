@@ -62,7 +62,7 @@ const Login = () => {
     w-[550px] h-[420px] bg-white/40 backdrop-blur-sm rounded-3xl 
     shadow-lg p-8 flex flex-col gap-6
     max-lg:w-[450px] max-md:w-[400px] 
-    max-sm:w-[460px] max-sm:h-[390px] max-sm:p-6
+    max-sm:w-[400px] max-sm:h-[390px] max-sm:p-6
   "
       >
         <h2 className="text-white font-poppins font-bold text-[25px] mb-2 text-left max-sm:text-[20px]">
