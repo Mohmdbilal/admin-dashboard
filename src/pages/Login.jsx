@@ -48,7 +48,7 @@ const Login = () => {
           className="
             font-poppins font-medium text-[18px]
             max-md:text-[16px] max-sm:text-[12px] 
-            max-sm:mx-auto max-sm:w-[300px]
+            max-sm:mx-auto max-sm:w-[270px]
           "
         >
           Login to your admin dashboard and manage dementia care efficiently
