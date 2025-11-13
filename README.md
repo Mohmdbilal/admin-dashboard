@@ -29,8 +29,6 @@ Includes authentication (Login & Forgot Password) and a dashboard with summary c
 - Password: emilyspass
 
 
-- Fully **responsive** for desktop and mobile
-
 ---
 
 ## Technologies
