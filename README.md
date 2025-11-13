@@ -23,12 +23,6 @@ Includes authentication (Login & Forgot Password) and a dashboard with summary c
   - Summary cards: Users, Doctors, Customers, Clinics, Revenue, Appointments
   - Logout clears session and redirects to login
  
-- ## Demo Credentials
-> For testing purposes only
-- Username: emilys  
-- Password: emilyspass
-
-
 ---
 
 ## Technologies
