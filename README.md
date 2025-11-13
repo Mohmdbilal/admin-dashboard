@@ -45,7 +45,7 @@ Includes authentication (Login & Forgot Password) and a dashboard with summary c
 ## How to Run
 
 ```bash
-git clone https://github.com/Mohmdbilal/admin-dashboard.git
+https://github.com/Mohmdbilal/admin-dashboard.git
 cd admin-dashboard
 npm install
 npm run dev
