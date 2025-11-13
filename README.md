@@ -1,16 +1,51 @@
-# React + Vite
+# Admin Dashboard Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Admin Dashboard** built with **React.js** and **Vite**.  
+Includes authentication (Login & Forgot Password) and a dashboard with summary cards (mock data).  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Login Page**
+  - Username & Password fields
+  - Login button with API integration
+  - Error message with retry button on failed login
+  - Forgot Password link
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Forgot Password Page**
+  - Input for username/email
+  - Send Reset Link button
+  - Success popup (no API)
 
-## Expanding the ESLint configuration
+- **Dashboard**
+  - Sidebar menu: Dashboard, Users, Doctors, Clinics, Appointments, Logout
+  - Summary cards: Users, Doctors, Customers, Clinics, Revenue, Appointments
+  - Logout clears session and redirects to login
+ 
+- ## Demo Credentials
+> For testing purposes only
+- Username: emilys  
+- Password: emilyspass
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+- Fully **responsive** for desktop and mobile
+
+---
+
+## Technologies
+
+- React.js, Vite  
+- Tailwind CSS  
+- React Router  
+- Git & GitHub  
+
+---
+
+## How to Run
+
+```bash
+git clone https://github.com/Mohmdbilal/admin-dashboard.git
+cd admin-dashboard
+npm install
+npm run dev
