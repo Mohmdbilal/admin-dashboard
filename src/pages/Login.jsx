@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import usernameIcon from "../assets/username-icon.svg";
 import passwordIcon from "../assets/password-icon.svg";
+import retryIcon from "../assets/retry-icon.svg";
 import { loginUser } from "../api/authApi";
 
 const Login = () => {
@@ -16,13 +17,18 @@ const Login = () => {
 
     try {
       const data = await loginUser(username, password);
-      console.log("Login success:", data);
       localStorage.setItem("token", data.token);
       navigate("/dashboard");
     } catch (err) {
       console.error(err);
       setError("Invalid username or password");
     }
+  };
+
+  const handleRetry = () => {
+    setUsername("");
+    setPassword("");
+    setError("");
   };
 
   return (
@@ -59,16 +65,17 @@ const Login = () => {
       <form
         onSubmit={handleLogin}
         className="
-    w-[550px] h-[420px] bg-white/40 backdrop-blur-sm rounded-3xl 
-    shadow-lg p-8 flex flex-col gap-6
-    max-lg:w-[450px] max-md:w-[400px] 
-    max-sm:w-[345px] max-sm:h-[360px] max-sm:p-6
-  "
+          w-[550px] h-[420px] bg-white/40 backdrop-blur-sm rounded-3xl 
+          shadow-lg p-8 flex flex-col gap-6
+          max-lg:w-[450px] max-md:w-[400px] 
+          max-sm:w-[345px] max-sm:h-[360px] max-sm:p-6
+        "
       >
         <h2 className="text-white font-poppins font-bold text-[25px] mb-2 text-left max-sm:text-[20px]">
           Login
         </h2>
 
+        {/* Username */}
         <div className="relative w-full ">
           <img
             src={usernameIcon}
@@ -88,6 +95,7 @@ const Login = () => {
           />
         </div>
 
+        {/* Password */}
         <div className="relative w-full">
           <img
             src={passwordIcon}
@@ -95,14 +103,14 @@ const Login = () => {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 opacity-80"
           />
           <input
-            type="password"
+            type="password" // native show/hide works automatically on mobile
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="
               w-full h-[55px] pl-14 pr-4 rounded-xl 
               text-[18px] font-poppins font-medium text-gray-800 placeholder-gray-600 outline-none
-              max-sm:text-[16px] max-sm:h-[50px] p
+              max-sm:text-[16px] max-sm:h-[50px]
             "
           />
           <p
@@ -116,8 +124,18 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Error Message */}
-        {error && <p className="text-red-500 text-sm font-poppins">{error}</p>}
+        {/* Error Message with Retry */}
+        {error && (
+          <div className="flex items-center gap-2">
+            <p className="text-red-500 text-sm font-poppins">{error}</p>
+            <img
+              src={retryIcon}
+              alt="Retry"
+              className="w-5 h-5 cursor-pointer"
+              onClick={handleRetry}
+            />
+          </div>
+        )}
 
         <button
           type="submit"

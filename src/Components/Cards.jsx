@@ -49,7 +49,7 @@ const Cards = () => {
             <div className="flex items-center gap-2">
               <img src={upIcon} alt="Up Icon" className="w-4 h-4" />
               <span className="font-poppins font-medium text-[16px] text-black">
-                +8% from last week
+                <span className="text-green-600">+8% </span>from last week
               </span>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Cards = () => {
             <div className="flex items-center gap-2">
               <img src={upIcon} alt="Up Icon" className="w-4 h-4" />
               <span className="font-poppins font-medium text-[16px] text-black">
-                +5% from last week
+                <span className="text-green-600">+5%</span> from last week
               </span>
             </div>
           </div>
@@ -149,7 +149,7 @@ const Cards = () => {
             <div className="flex items-center gap-2 mb-2">
               <img src={upIcon} alt="Up Icon" className="w-4 h-4" />
               <span className="text-[20px] font-medium text-black">
-                +8% from last week
+                <span className="text-green-600">+8% </span>from last week
               </span>
             </div>
 
@@ -220,12 +220,12 @@ const Cards = () => {
                   />
                 </div>
 
-                <span className="text-[16px] font-medium text-black">
+                <span className="text-[13px] md:text-[14px] font-medium text-black">
                   {doctor.name}
                 </span>
               </div>
 
-              <span className="text-[16px] font-medium text-gray-700">
+              <span className="text-[13px] md:text-[14px] font-medium text-gray-700">
                 {doctor.department}
               </span>
 
